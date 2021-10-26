@@ -1,0 +1,108 @@
+/* --------------- CSS Reset --------------- */
+
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+ul {
+  padding: 0rem;
+  margin: 0rem;
+}
+
+ul li a {
+  margin: 0rem;
+  padding: 0rem;
+  text-decoration: none;
+  color: inherit;
+}
+ul li {
+  padding: 0rem;
+  margin: 0rem;
+  list-style: none;
+}
+
+button {
+  margin: 0rem;
+  padding: 0rem;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* --------------- Color Palette --------------- */
+:root {
+  --primary: #ed5d95;
+  --primary4: #ed5d95;
+  --primary3: #f8b5cb;
+  --primary5: #762444;
+  --primary6: #68002a;
+  --primary1: #ffccee;
+  --primary2: #f49abc;
+
+  --secondary: #c06a8c;
+  --secondary1: #ac3464;
+  --secondary2: #8d3e5b;
+  --purple: #976f95;
+  --blue: #5c72c7;
+  --blue2: #95a5ff;
+  --blue1: #cedcff;
+
+  --peach: #ff906d;
+  --sunsetOrange: #ffb260;
+  --orange: #ffd55f;
+  --yellow: #f9f871;
+  --tamarind: #2a111a;
+  --font: #725570;
+  --font3: #d8bfd8;
+  --font2: #ddd7c6;
+  --font1: #ddd7c6;
+  --grey: #666666;
+  --black: #231017;
+}
+/* --------------- CSS --------------- */
+
+.page {
+  margin-top: 1rem;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#topNav {
+  display: flex;
+  flex-direction: column;
+}
+
+#navMenu ul li:nth-child(1) {
+  margin-top: 2rem;
+}
+
+#navMenu ul li {
+  margin-bottom: 1.5rem;
+}
+
+.loginBtn {
+  border: 2px solid;
+  border-radius: 20rem;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo i {
+  font-size: 2rem;
+}
+
+.logo img {
+  width: 80%;
+}
