@@ -141,7 +141,7 @@ body {
   color: var(--grey);
   background-color: #fdedf3;
   overflow-y: scroll;
-
+  z-index: 99;
   width: 100%;
   position: fixed;
   height: 100vh;
@@ -206,4 +206,59 @@ body {
 
 .show {
   display: block;
+}
+
+/* ----------------- Styling search Bar ----------------- */
+#bottomNav {
+  display: flex;
+  align-items: center;
+  background: var(--secondary);
+  padding: 1rem 0.5rem;
+  margin: auto;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--primary1);
+  border-radius: 2rem;
+  padding: 0rem 0.8rem;
+  height: 2rem;
+  margin-right: 1.5rem;
+}
+
+.searchBar i {
+  margin-right: 0.5rem;
+  color: var(--primary1);
+}
+
+.searchBar input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-style: italic;
+}
+
+.navIcons {
+  display: flex;
+  align-items: center;
+  color: var(--primary1);
+  font-size: 1.5rem;
+}
+
+.navIcon {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.navIcon div {
+  position: absolute;
+  background: var(--peach);
+  padding: 0.1rem 0.3rem;
+  border-radius: 20rem;
+  color: white;
+  font-size: 0.8rem;
+  top: 0.8rem;
+  left: 0.8rem;
 }
