@@ -33,6 +33,14 @@ button {
   font-size: inherit;
 }
 
+a {
+  cursor: pointer;
+}
+
+body {
+  height: 1000rem;
+}
+
 /* --------------- Color Palette --------------- */
 :root {
   --primary: #ed5d95;
@@ -65,14 +73,14 @@ button {
 }
 /* --------------- CSS --------------- */
 
-.page {
-  margin-top: 1rem;
-}
-
 .container {
   max-width: 90%;
   margin: 0 auto;
 }
+
+/* --------------------------------------------------
+            Styling Navbar 
+-------------------------------------------------- */
 
 #topNav {
   display: flex;
@@ -88,21 +96,114 @@ button {
 }
 
 .loginBtn {
-  border: 2px solid;
+  border: 2px solid var(--primary4);
+  transition: all 0.3 ease;
   border-radius: 20rem;
   padding: 0.5rem 1rem;
+}
+
+.loginBtn:hover {
+  border: 2px solid transparent;
+  background: var(--primary4);
+  color: white;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #fdedf3;
+  padding: 0.5rem 0rem;
+  margin: auto;
+  box-shadow: 0px 15px 10px -19px var(--grey);
 }
 
 .logo i {
   font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--primary4);
+}
+
+.logo i:hover {
+  cursor: pointer;
+  color: var(--peach);
 }
 
 .logo img {
-  width: 80%;
+  width: 65%;
+  margin-left: 0.5rem;
+}
+
+/* ----------------- Sidebar menu ----------------- */
+
+.navbarMenu {
+  padding-left: 2rem;
+  color: var(--grey);
+  background-color: #fdedf3;
+  overflow-y: scroll;
+
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in;
+}
+
+#navMenu .cross {
+  display: flex;
+  justify-content: right;
+  margin: 2rem 2rem 0rem 0rem;
+  font-size: 1.5rem;
+  color: var(--primary4);
+}
+
+.cross:hover {
+  cursor: pointer;
+  color: var(--peach);
+}
+
+#navMenu ul li a {
+  transition: all 0.3 ease;
+}
+
+#navMenu ul li a:hover {
+  color: var(--primary4);
+}
+
+/* ---------------- Styling collection submenu ------------------- */
+
+.collectionSubmenu {
+  display: none;
+}
+
+.collectionCategoryParent {
+  display: flex;
+}
+
+.collectionTitle {
+  margin-right: 1rem;
+}
+
+.expandIcon:hover {
+  cursor: pointer;
+}
+
+.collectionSubmenu ul li {
+  border-bottom: 1px solid white;
+  margin: 0rem 1rem;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.collectionSubmenu ul li:hover {
+  background-color: white;
+}
+
+.rotateIcon {
+  transform: rotate(180deg);
+}
+
+.show {
+  display: block;
 }

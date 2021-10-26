@@ -29,25 +29,46 @@
     <div class="page">
       <header class="header" id="header">
         <nav>
-          <section class="navWrapper container">
+          <section class="navWrapper">
             <section class="navbar" id="topNav">
               <div class="logo">
                 <img src="assests/PRAMADVARA FINAL LOGO.svg" />
 
                 <div class="hamburgerMenu">
                   <i class="fas fa-bars"></i>
-                  <!-- <i class="fas fa-times"></i> -->
                 </div>
               </div>
 
               <div class="navbarMenu">
                 <div id="navMenu">
+                  <i class="fas fa-times cross"></i>
+
                   <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Collections</a></li>
+                    <li>
+                      <a href="#">
+                        <div class="collectionCategoryParent">
+                          <div class="collectionTitle">Collections</div>
+                          <div class="expandIcon">
+                            <i class="fas fa-caret-down"></i>
+                          </div>
+                        </div>
+                      </a>
+
+                      <!-- ------ SubCollections ----- -->
+
+                      <div class="collectionSubmenu">
+                        <ul>
+                          <li><a href="#">Collection 1</a></li>
+                          <li><a href="#">Collection 2</a></li>
+                          <li><a href="#">Collection 3</a></li>
+                          <li><a href="#">Collection 4</a></li>
+                          <li><a href="#">Collection 5</a></li>
+                        </ul>
+                      </div>
+                    </li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
-                    <!-- <li><a href="#">Categories</a></li> -->
                     <li>
                       <a href="#"
                         ><button class="loginBtn">Login/Register</button></a
@@ -63,5 +84,9 @@
         </nav>
       </header>
     </div>
+
+    <!-- ---------------- Scripts ------------------ -->
+
+    <script src="JS/script.js"></script>
   </body>
 </html>
