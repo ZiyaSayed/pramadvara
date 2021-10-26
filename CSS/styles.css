@@ -85,6 +85,8 @@ body {
 #topNav {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background-color: #fdedf3;
 }
 
 #navMenu ul li:nth-child(1) {
@@ -112,9 +114,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fdedf3;
   padding: 0.5rem 0rem;
-  margin: auto;
   box-shadow: 0px 15px 10px -19px var(--grey);
 }
 
@@ -130,7 +130,7 @@ body {
 }
 
 .logo img {
-  width: 65%;
+  width: 60%;
   margin-left: 0.5rem;
 }
 
@@ -148,6 +148,10 @@ body {
   top: 0;
   left: -100%;
   transition: all 0.3s ease-in;
+}
+
+.desktopMenu {
+  display: none;
 }
 
 #navMenu .cross {
@@ -212,9 +216,9 @@ body {
 #bottomNav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: var(--secondary);
   padding: 1rem 0.5rem;
-  margin: auto;
 }
 
 .searchBar {
@@ -224,7 +228,15 @@ body {
   border-radius: 2rem;
   padding: 0rem 0.8rem;
   height: 2rem;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
+}
+
+.collectionDropdown {
+  display: none;
+}
+
+.collectionDDsubmenu {
+  display: none;
 }
 
 .searchBar i {
@@ -249,6 +261,9 @@ body {
 
 .navIcon {
   position: relative;
+}
+
+.navIcon:not(:last-child) {
   margin-right: 1rem;
 }
 
@@ -260,5 +275,122 @@ body {
   color: white;
   font-size: 0.8rem;
   top: 0.8rem;
-  left: 0.8rem;
+  left: -0.5rem;
+}
+
+/* -------------- Media Query for Navbar --------------------- */
+
+@media (min-width: 450px) {
+  .logo img {
+    width: 50%;
+  }
+
+  .searchBar {
+    width: 70%;
+  }
+}
+
+@media (min-width: 650px) {
+  .logo img {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 20%;
+  }
+
+  .searchBar {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo img {
+    width: 60%;
+  }
+  .hamburgerMenu {
+    display: none;
+  }
+  #topNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .desktopMenu {
+    display: flex;
+    justify-content: center;
+    color: var(--font);
+  }
+
+  .desktopMenu ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .desktopMenu ul li {
+    margin-right: 1rem;
+    transition: all 0.3s ease-in;
+  }
+
+  .desktopMenu ul li:hover {
+    color: var(--primary);
+  }
+  .loginBtn {
+    color: var(--grey);
+  }
+
+  .collectionDropdown {
+    display: flex;
+    border-right: 1px solid var(--primary1);
+    position: relative;
+  }
+
+  .collectionDropdown a {
+    color: var(--primary1);
+    text-decoration: none;
+  }
+
+  .searchBar i {
+    margin: 0rem 0.5rem;
+  }
+
+  .collectionDDsubmenu {
+    position: absolute;
+    top: 1.5rem;
+    align-items: center;
+    left: 0rem;
+    z-index: 1;
+    width: 100%;
+    opacity: 1;
+    box-shadow: 2px 5px 8px rgb(51 51 51 / 5%), -2px 5px 8px rgb(51 51 51 / 5%);
+    background-color: var(--primary1);
+    display: none;
+  }
+
+  .collectionDDsubmenu ul li {
+    padding: 0.5rem;
+    margin: auto;
+  }
+
+  .collectionDDsubmenu ul li a {
+    color: var(--secondary);
+    text-align: center;
+    transition: all 0.3s ease-in;
+  }
+
+  .collectionDDsubmenu ul li a:hover {
+    border-bottom: 2px solid var(--primary1);
+  }
+
+  .expandIcon:hover {
+    transform: rotate(180deg);
+  }
+
+  .collectionDropdown:hover .collectionDDsubmenu {
+    display: flex;
+  }
 }
