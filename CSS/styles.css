@@ -33,7 +33,11 @@ button {
   font-size: inherit;
 }
 
-a {
+a:hover {
+  cursor: pointer;
+}
+
+button:hover {
   cursor: pointer;
 }
 
