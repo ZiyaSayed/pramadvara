@@ -401,6 +401,162 @@ body {
   display: none;
 }
 
-.bullet {
-  background-color: red;
+.heroWrapper {
+  max-width: 85%;
+  margin: 0rem auto;
+}
+
+.bullet button {
+  background-color: var(--primary1);
+}
+.glide__arrows button {
+  color: white;
+  background: var(--secondary1);
+  border-radius: 100%;
+  border: none;
+  font-size: 1rem;
+  top: 50%;
+}
+
+.glide__arrows button:nth-child(1) {
+  left: -1rem;
+}
+
+.glide__arrows button:nth-child(2) {
+  right: -1rem;
+}
+
+.glide__slides li {
+  background: url("../assests/Vector.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position-y: 30%;
+  background-position-x: 40%;
+
+  padding: 2rem;
+}
+
+.heroTitle {
+  font-size: 0.8rem;
+  color: var(--purple);
+}
+
+.heroHeading {
+  font-size: 1.2rem;
+  color: var(--primary5);
+  margin: 1rem 0rem;
+}
+
+.heroDescription {
+  font-size: 0.9rem;
+  color: var(--font);
+}
+
+.shopNowBtn {
+  border: 2px solid var(--secondary1);
+  border-radius: 20rem;
+  width: 70%;
+  padding: 0.8rem 1rem;
+  margin: 2rem 0rem;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease-in;
+}
+
+.shopNowBtn a button {
+  display: flex;
+  align-items: center;
+  color: var(--secondary);
+}
+
+.shopNowBtn:hover {
+  border: 2px solid transparent;
+  background-color: var(--secondary1);
+}
+
+.shopNowBtn a button p {
+  margin-right: 1rem;
+}
+
+.bullet.glide__bullet--active button {
+  background-color: var(--primary4);
+}
+
+.bullet.glide__bullet--active {
+  background: transparent;
+}
+
+/* ------------------------ Hero Section Media Query --------------------- */
+
+@media (min-width: 400px) {
+  .shopNowBtn {
+    width: 60%;
+  }
+}
+
+@media (min-width: 550px) {
+  .glide__slides li {
+    background-size: 60%;
+    background-position-y: 30%;
+    background-position-x: 30%;
+  }
+}
+
+@media (min-width: 700px) {
+  .glide__slides li {
+    background-size: 50%;
+    background-position-y: 50%;
+    background-position-x: 30%;
+  }
+}
+
+@media (min-width: 600px) {
+  .shopNowBtn {
+    width: 35%;
+  }
+}
+
+@media (min-width: 770px) {
+  .shopNowBtn {
+    width: 50%;
+  }
+  .glide__slides li {
+    background: none;
+  }
+
+  .heroImage {
+    display: block;
+  }
+
+  .glide__slide {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+
+  .heroImage {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  .heroImage img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 930px) {
+  .shopNowBtn {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .shopNowBtn {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .heroImage img {
+    width: 60%;
+  }
 }

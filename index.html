@@ -150,7 +150,7 @@
         --------------------------------------------- -->
 
         <section class="hero">
-          <div class="heroSection container">
+          <div class="heroSection heroWrapper">
             <div class="glide" id="heroSlide">
               <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
@@ -172,10 +172,17 @@
                       </div>
 
                       <div class="shopNowBtn">
-                        <button><a href="#">Shop Now &rarr</a></button>
+                        <a href="#">
+                          <button>
+                            <p>Shop Now</p>
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </a>
                       </div>
                     </div>
-                    <div class="heroImage" id="heroImage-1"></div>
+                    <div class="heroImage" id="heroImage-1">
+                      <img src="assests/6600170489_a77f7d9aa4_o.jpg" />
+                    </div>
                   </li>
                   <li class="glide__slide">
                     <div class="heroText">
@@ -195,10 +202,17 @@
                       </div>
 
                       <div class="shopNowBtn">
-                        <button><a href="#">Shop Now &rarr</a></button>
+                        <a href="#">
+                          <button>
+                            <p>Shop Now</p>
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </a>
                       </div>
                     </div>
-                    <div class="heroImage" id="heroImage-1"></div>
+                    <div class="heroImage" id="heroImage-1">
+                      <img src="assests/6600170489_a77f7d9aa4_o.jpg" />
+                    </div>
                   </li>
                   <li class="glide__slide">
                     <div class="heroText">
@@ -218,34 +232,41 @@
                       </div>
 
                       <div class="shopNowBtn">
-                        <button><a href="#">Shop Now &rarr</a></button>
+                        <a href="#">
+                          <button>
+                            <p>Shop Now</p>
+                            <i class="fas fa-arrow-right"></i>
+                          </button>
+                        </a>
                       </div>
                     </div>
-                    <div class="heroImage" id="heroImage-1"></div>
+                    <div class="heroImage" id="heroImage-1">
+                      <img src="assests/6600170489_a77f7d9aa4_o.jpg" />
+                    </div>
                   </li>
                 </ul>
               </div>
 
               <!-- ----------------- Glide Arrows ----------------- -->
 
-              <div class="glide__arrows" data-glide-el="controls">
+              <div class="glide__arrows arrows" data-glide-el="controls">
                 <button
-                  class="glide__arrow glide__arrow--left"
+                  class="glide__arrow glide__arrow--left arrow"
                   data-glide-dir="<"
                 >
-                  prev
+                  <i class="fas fa-chevron-left"></i>
                 </button>
                 <button
-                  class="glide__arrow glide__arrow--right"
+                  class="glide__arrow glide__arrow--right arrow"
                   data-glide-dir=">"
                 >
-                  next
+                  <i class="fas fa-chevron-right"></i>
                 </button>
               </div>
 
               <!-- ----------------- Glide Bullets ----------------- -->
 
-              <div class="glide__bullets bullet" data-glide-el="controls[nav]">
+              <div class="glide__bullets bullets" data-glide-el="controls[nav]">
                 <div class="bullet">
                   <button class="glide__bullet" data-glide-dir="=0"></button>
                 </div>
@@ -265,6 +286,8 @@
     <!-- ---------------- Scripts ------------------ -->
 
     <script src="JS/script.js"></script>
+
+    <!-- ---------------- Glide Carousel ------------------ -->
 
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
