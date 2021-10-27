@@ -394,3 +394,13 @@ body {
     display: flex;
   }
 }
+
+/* --------------------------- Styling Hero Section ------------------------------- */
+
+.heroImage {
+  display: none;
+}
+
+.bullet {
+  background-color: red;
+}
