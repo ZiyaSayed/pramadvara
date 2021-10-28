@@ -413,7 +413,7 @@ body {
 .bullet button {
   background-color: var(--primary1);
 }
-.glide__arrows button {
+.arrows button {
   color: white;
   background: var(--secondary1);
   border-radius: 100%;
@@ -422,11 +422,11 @@ body {
   top: 50%;
 }
 
-.glide__arrows button:nth-child(1) {
+.arrows button:nth-child(1) {
   left: -1rem;
 }
 
-.glide__arrows button:nth-child(2) {
+.arrows button:nth-child(2) {
   right: -1rem;
 }
 
@@ -531,7 +531,7 @@ body {
     display: block;
   }
 
-  .glide__slide {
+  .heroSlider .glide__slide {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
@@ -562,5 +562,121 @@ body {
 @media (min-width: 1200px) {
   .heroImage img {
     width: 60%;
+  }
+}
+
+/* -----------------------------------------------------------
+                  Styling ProductImage Slider 
+-------------------------------------------------------------- */
+
+.productSlideTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourProducts {
+  color: var(--secondary1);
+  font-size: 1.4rem;
+}
+.floral img {
+  width: 4rem;
+}
+
+.floral:first-of-type {
+  transform: rotateY(180deg);
+}
+
+main {
+  margin-top: 2rem;
+}
+
+.productSlider ul li {
+  background: none;
+}
+
+.productCardImage img {
+  width: 100%;
+  margin: auto;
+}
+
+.productCard {
+  position: relative;
+}
+
+.productCardText {
+  position: absolute;
+  bottom: 0%;
+  background: var(--tamarind);
+  display: block;
+  width: 100%;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.productCardLink a {
+  text-decoration: underline;
+  color: var(--purple);
+}
+
+.productCardPrice {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0.3rem 0rem;
+}
+
+.productCardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productCardIcons {
+  display: flex;
+  flex-direction: column;
+}
+
+.productCardIcons i:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.productCardIcons i {
+  transition: all 0.3s ease-in;
+}
+.productCardIcons i:hover {
+  color: var(--orange);
+}
+
+.productArrows button {
+  border: none;
+  top: 100%;
+  background: var(--primary2);
+}
+
+.productArrows button i {
+  color: var(--primary6);
+}
+
+@media (min-width: 426px) {
+  .productSlider div ul li {
+    position: relative;
+    margin: 2rem 0.5rem;
+    padding: 0rem;
+  }
+
+  .productCardText {
+    width: 90%;
+  }
+
+  .productCardImage img {
+    width: 90%;
+  }
+
+  .ourProducts {
+    font-size: 2rem;
+  }
+
+  main {
+    margin-top: 8rem;
   }
 }
