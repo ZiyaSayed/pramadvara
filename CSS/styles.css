@@ -657,6 +657,10 @@ main {
   color: var(--primary6);
 }
 
+.productCard:hover .productCardImage {
+  transform: scale(1.1);
+}
+
 @media (min-width: 426px) {
   .productSlider div ul li {
     position: relative;
@@ -678,5 +682,177 @@ main {
 
   main {
     margin-top: 8rem;
+  }
+}
+
+/* ----------------------------------------------------
+            Styling collection Section 
+-------------------------------------------- */
+
+.collections {
+  margin-top: 8rem;
+}
+
+.collectionContent {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+.contentOverlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.contentImage {
+  width: 100%;
+  height: 100%;
+}
+
+.contentDetails {
+  position: absolute;
+  text-align: center;
+  padding: 0rem 1rem;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.contentDetails h3 {
+  color: var(--primary1);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.contentDetails p {
+  color: #fff;
+  font-size: 0.9em;
+}
+
+.contentDetails a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.collectionSection {
+  display: grid;
+  /* grid-template-columns: 200px 1fr 1fr; */
+  grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "c1"
+    "c2"
+    "c3"
+    "c4"
+    "c5";
+}
+
+.collection-1 {
+  grid-area: c1;
+}
+
+.collection-2 {
+  grid-area: c2;
+}
+.collection-3 {
+  grid-area: c3;
+}
+.collection-4 {
+  grid-area: c4;
+}
+.collection-5 {
+  grid-area: c5;
+}
+
+.collection-3 .collectionContent {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../assests/1210524.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50%;
+}
+
+.collectionContentBox h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--secondary2);
+}
+
+.collectionContentBox a {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: all 0.3 ease-in;
+}
+
+.collectionContentBox a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------ Collection Media Query -------------------------- */
+
+@media (min-width: 500px) {
+  .collectionSection {
+    grid-template-rows: 1fr 1fr 0.8fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .collectionSection {
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    grid-template-rows: 12rem 15rem 15rem 15rem;
+    grid-template-areas:
+      "c1 c2 c2"
+      "c1 c3 c4"
+      "c5 c5 c4";
+  }
+
+  .collectionContent {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .contentOverlay {
+    opacity: 0;
+  }
+  .contentDetails {
+    opacity: 0;
+    top: 0%;
+    left: 50%;
+  }
+  .collectionContent:hover .contentDetails {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .collectionContent:hover .contentOverlay {
+    opacity: 1;
   }
 }
